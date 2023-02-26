@@ -1,22 +1,28 @@
+
+import matplotlib.pyplot as plt
+import csv
 import numpy as np
-import matplotlib.pyplot as plt  # To visualize
-import pandas as pd  # To read data
-import sklearn
+x = []
+y = []
+  
+with open('C:/Users/jojo/OneDrive/Documents/GitHub/proj_final/data.csv','r') as csvfile:
+    lines = csv.reader(csvfile, delimiter=',')
+    for row in lines:
+        x.append(row[0])
+        y.append(int(row[1]))
 
-data = pd.read_csv('C:/Users/jojo/OneDrive/Documents/GitHub/proj_final/data.csv')  # load data set
-#print(data.head(20))
-X = data.iloc[:, 0].values.reshape(-1, 1)  # values converts it into a numpy array
-Y = data.iloc[:, 1].values.reshape(-1, 1)  # -1 means that calculate the dimension of rows, but have 1 column
-Z = data.iloc[:, 2].values.reshape(-1, 1)
+X = np.linspace(0, 100, 100)
+m = (float(y[len(y)-3]) - float(y[2]))/(float(x[len(x)-3]) - float(x[2])) #predict slope of graph
+b = int(y[len(y)-3]) - (int(m)*int(x[len(x)-3]))
+Y = m*X + b
+fig = plt.figure(figsize = (10, 5))
+# Create the plot
+plt.plot(X,Y, color = 'b', marker = 'o',label = "Trend")
 
-fig = plt.figure()
-ax = plt.axes(projection='3d')
-
-
-plt.xlabel("Time Exercised Regardless of Acitivity")
-plt.ylabel("Calories burned")
-plt.clabel("Weight")
-plt.title("Time vs Calories vs Weight!")
-ax.scatter3D(X, Y, Z, c=Z, cmap='Greens')
-ax.plot3D(X, Y, Z, 'gray')
+plt.xticks(rotation = 25)
+plt.xlabel('Time')
+plt.ylabel('Calories burned')
+plt.title('Exercise Graph', fontsize = 20)
+plt.grid()
+plt.legend()
 plt.show()
