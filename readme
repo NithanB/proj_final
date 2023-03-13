@@ -1,0 +1,21 @@
+This final project of DGE-106 Calculus is the model of data with the relationship between calories burned and exercise time.
+
+The group project consists of Nithan Panyos, Sansern Pattanasitthiseree, and Visarut Sawadiyakorn
+
+I, Nithan Panyos, am the writer of this readme file.
+
+How do I import the data into the code? I used csv library in order to open and read csv files written in Microsoft Excel (Spreadsheet Processing)
+
+After importing the data and placing them into the x and y arrays, respectively, the coordinates are being calculated internally using linear regression technique.
+
+The slope of the linear regression is being calculated by finding the difference between the first and last third of the data in the list.
+
+The formula is then graphed using matplotlib
+
+You can find the code from data_imp.py
+
+The linear regression formula is being differentiated in order to check whether the slope of the graph matches the calculated data or not.
+
+The formula is then integrated, both definite and indefinite to find the second degree of the formula and find the area under graph (given 50 minutes to 80 minutes of exercise).
+
+
