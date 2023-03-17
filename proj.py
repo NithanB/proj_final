@@ -8,7 +8,7 @@ y = list(data.values())
 
 fig = plt.figure(figsize = (10,5))
 
-plt.bar(x,y, color = 'green', width = 0.5)
+plt.bar(x,y, color = 'pink', width = 0.5)
 
 plt.xlabel("Activities")
 plt.ylabel("Calories burned")
