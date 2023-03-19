@@ -16,6 +16,7 @@ You can find the code from data_imp.py
 
 The linear regression formula is being differentiated in order to check whether the slope of the graph matches the calculated data or not.
 
-The formula is then integrated, both definite and indefinite to find the second degree of the formula and find the area under graph (given 50 minutes to 80 minutes of exercise).
+The formula is then integrated, both definite and indefinite to find the second degree of the formula and find the area under graph.
 
+The graph show most performance is given 50 minutes to 80 minutes of exercise and skiling compared to weight-lifting aerobic and rowing.
 
