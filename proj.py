@@ -12,5 +12,5 @@ plt.bar(x,y, color = 'pink', width = 0.5)
 
 plt.xlabel("Activities")
 plt.ylabel("Calories burned")
-plt.title("Activities vs Calories Burned!")
+plt.title("Activities vs Calories Burned!!")
 plt.show()
