@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Polygon
-m = 17.633333333333333
+m = 17.6333
 B= -356
 def func(x):
     return m*x + B
