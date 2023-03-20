@@ -1,16 +1,15 @@
-
+from function import func
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Polygon
 m = 17.633333333333333
 B= -356
-def func(x):
-    return m*x + B
+
 
 
 a, b = 50,  80 # integral limits
 x = np.linspace(20, 100)
-y = func(x)
+y = func(x,m,B)
 
 fig, ax = plt.subplots()
 ax.plot(x, y, 'r', linewidth=2)
