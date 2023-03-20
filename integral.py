@@ -17,7 +17,7 @@ ax.set_ylim(bottom=0)
 
 # Make the shaded region
 ix = np.linspace(a, b)
-iy = func(ix)
+iy = func(ix,m,B)
 verts = [(a, 0), *zip(ix, iy), (b, 0)]
 poly = Polygon(verts, facecolor='0.9', edgecolor='0.5')
 ax.add_patch(poly)
